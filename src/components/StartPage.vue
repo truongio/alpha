@@ -12,6 +12,14 @@
       </md-layout>
     </md-layout>
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
+    <md-layout md-align="center">
+      <md-layout md-flex="30">
+        <md-input-container>
+          <label>Name</label>
+          <md-input v-model="name"></md-input>
+        </md-input-container>
+      </md-layout>
+    </md-layout>
   </div>
 </template>
 
@@ -27,15 +35,16 @@ export default {
     return {
       searchString: '',
       msg: 'Welcome to Alpha',
+      name: '',
       searchResult: [
-        { name: 'Truong Hoang', city: 'Kristinehamn', country: 'Sweden' },
-        { name: 'Anders Andersson', city: 'Stockholm', country: 'Sweden' },
-        { name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
-        { name: 'Per Persson', city: 'Malmö', country: 'Sweden' },
-        { name: 'Truong Hoang', city: 'Kristinehamn', country: 'Sweden' },
-        { name: 'Anders Andersson', city: 'Stockholm', country: 'Sweden' },
-        { name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
-        { name: 'Per Persson', city: 'Malmö', country: 'Sweden' }
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Truong Hoang', city: 'Kristinehamn', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Anders Andersson', city: 'Stockholm', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Per Persson', city: 'Malmö', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Truong Hoang', city: 'Kristinehamn', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Anders Andersson', city: 'Stockholm', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
+        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Per Persson', city: 'Malmö', country: 'Sweden' }
       ]
     }
   },
@@ -44,7 +53,7 @@ export default {
       this.$root.$firebaseRefs.person.push(
         {
           'url': 'http://i.imgur.com/1rTODyG.jpg',
-          'name': 'Truong Hoang',
+          'name': this.name,
           'city': 'Stockholm',
           'country': 'Sweden',
           'created_at': -1 * new Date().getTime()
@@ -73,5 +82,9 @@ li {
 
 a {
   color: #42b983;
+}
+
+.start-page-container {
+  margin-top: 40px;
 }
 </style>

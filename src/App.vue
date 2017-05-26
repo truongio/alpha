@@ -7,8 +7,10 @@
   
       <h2 class="md-title" style="flex: 1">Alpha</h2>
     </md-toolbar>
+
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
+      <div class="md-display-3">Alpha</div>
+      <img src="./assets/logo.png" width="128px"/>
       <router-view></router-view>
     </main>
   </div>
@@ -54,5 +56,9 @@ header span {
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
+}
+
+.md-display-3 {
+  font-weight: 600;
 }
 </style>

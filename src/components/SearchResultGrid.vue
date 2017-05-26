@@ -1,13 +1,13 @@
 <template>
   <md-layout class="search-result-grid">
-    <md-layout md-align="center" md-flex="25" v-for="result in searchResult" key="result" v-if="fuzzySearch(result)">
+    <md-layout md-align="center" md-flex="25" v-for="result in searchResult" :key="result.name" v-if="fuzzySearch(result)">
       <md-whiteframe>
         <md-avatar class="avatar">
           <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
         </md-avatar>
         <div class="md-title">{{result.name}}</div>
         <div class="md-subhead">{{result.city}}, {{result.country}}</div>
-        <md-button class="md-raised md-accent" @click.native="toInfo">Info</md-button>
+        <md-button @click.native="toInfo"><md-icon>info</md-icon></md-button>
       </md-whiteframe>
     </md-layout>
   </md-layout>
