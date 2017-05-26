@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <header>
-      <span>Alpha</span>
-    </header>
+    <md-toolbar>
+      <md-button class="md-icon-button">
+        <md-icon>menu</md-icon>
+      </md-button>
+  
+      <h2 class="md-title" style="flex: 1">Alpha</h2>
+    </md-toolbar>
     <main>
       <img src="./assets/logo.png" alt="Vue.js PWA">
       <router-view></router-view>
