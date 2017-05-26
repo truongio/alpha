@@ -7,7 +7,7 @@
           <md-input v-model="searchString"></md-input>
         </md-input-container>
         <md-layout md-align="center">
-          <md-button class="md-raised" @click.native="pushPerson">Create person</md-button>
+          <md-button class="md-raised md-primary" @click.native="pushPerson">Create person</md-button>
         </md-layout>
       </md-layout>
     </md-layout>
