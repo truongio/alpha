@@ -35,17 +35,7 @@ export default {
     return {
       searchString: '',
       msg: 'Welcome to Alpha',
-      name: '',
-      searchResult: [
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Truong Hoang', city: 'Kristinehamn', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Anders Andersson', city: 'Stockholm', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Per Persson', city: 'Malmö', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Truong Hoang', city: 'Kristinehamn', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Anders Andersson', city: 'Stockholm', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
-        { url: 'http://i.imgur.com/1rTODyG.jpg', name: 'Per Persson', city: 'Malmö', country: 'Sweden' }
-      ]
+      name: ''
     }
   },
   methods: {
