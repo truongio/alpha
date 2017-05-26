@@ -6,9 +6,12 @@
           <label>Search</label>
           <md-input v-model="searchString"></md-input>
         </md-input-container>
+        <md-layout md-align="center">
+          <md-button class="md-raised md-accent" @click.native="pushPerson">Create person</md-button>
+        </md-layout>
       </md-layout>
     </md-layout>
-    <search-result-grid :searchResult="searchResult"></search-result-grid>
+    <search-result-grid :searchResult="this.$root.person"></search-result-grid>
   </div>
 </template>
 
@@ -34,6 +37,19 @@ export default {
         { name: 'Erik Eriksson', city: 'Göteborg', country: 'Sweden' },
         { name: 'Per Persson', city: 'Malmö', country: 'Sweden' }
       ]
+    }
+  },
+  methods: {
+    pushPerson () {
+      this.$root.$firebaseRefs.person.push(
+        {
+          'url': 'http://i.imgur.com/1rTODyG.jpg',
+          'name': 'Truong Hoang',
+          'city': 'Stockholm',
+          'country': 'Sweden',
+          'created_at': -1 * new Date().getTime()
+        })
+        .then(this.$router.push('/'))
     }
   }
 }

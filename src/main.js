@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueMaterial from 'vue-material'
+import Vuefire from 'vuefire'
+import firebase from './services/firebase'
 
+Vue.use(Vuefire)
 Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
@@ -12,6 +15,9 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  firebase: {
+    person: firebase.database.ref('person')
+  },
   router,
   template: '<App/>',
   components: { App }
