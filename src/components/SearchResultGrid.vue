@@ -1,13 +1,13 @@
 <template>
   <md-layout class="search-result-grid">
-    <md-layout md-align="center" md-flex="25" v-for="result in searchResult" key="result">
+    <md-layout md-align="center" md-flex="25" v-for="result in searchResult" key="result" v-if="fuzzySearch(result)">
       <md-whiteframe>
         <md-avatar class="avatar">
           <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
         </md-avatar>
         <div class="md-title">{{result.name}}</div>
         <div class="md-subhead">{{result.city}}, {{result.country}}</div>
-  
+        <md-button class="md-raised md-accent" @click.native="toInfo">Info</md-button>
       </md-whiteframe>
     </md-layout>
   </md-layout>
@@ -16,11 +16,20 @@
 <script>
 export default {
   name: 'search-result-grid',
-  props: ['searchResult'],
+  props: ['searchResult', 'searchString'],
   data () {
     return {
-      searchString: '',
       msg: 'Welcome to Alpha'
+    }
+  },
+  methods: {
+    toInfo () {
+      window.location.href = 'https://www.google.se'
+    },
+    fuzzySearch (result) {
+      var name = result.name.toLowerCase()
+      var search = this.searchString.toLowerCase()
+      return search === '' ? false : name.indexOf(search) !== -1
     }
   }
 }

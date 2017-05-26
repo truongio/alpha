@@ -1,17 +1,17 @@
 <template>
   <div class="start-page-container">
     <md-layout md-align="center">
-      <md-layout md-flex="50">
+      <md-layout md-flex="30">
         <md-input-container>
           <label>Search</label>
           <md-input v-model="searchString"></md-input>
         </md-input-container>
         <md-layout md-align="center">
-          <md-button class="md-raised md-accent" @click.native="pushPerson">Create person</md-button>
+          <md-button class="md-raised" @click.native="pushPerson">Create person</md-button>
         </md-layout>
       </md-layout>
     </md-layout>
-    <search-result-grid :searchResult="this.$root.person"></search-result-grid>
+    <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
   </div>
 </template>
 
