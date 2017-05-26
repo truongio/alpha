@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # alpha
 
 > A Vue.js project
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# alpha
+>>>>>>> 3bbbaa45396081dfe46832c091bc7a0f44803133
