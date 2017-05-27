@@ -7,7 +7,7 @@
         </md-avatar>
         <div class="md-title">{{result.name}}</div>
         <div class="md-subhead">{{result.city}}, {{result.country}}</div>
-        <md-button @click.native="toInfo"><md-icon>info</md-icon></md-button>
+        <md-button @click.native="toInfo(result.url)"><md-icon>info</md-icon></md-button>
       </md-whiteframe>
     </md-layout>
   </md-layout>
@@ -23,8 +23,8 @@ export default {
     }
   },
   methods: {
-    toInfo () {
-      window.location.href = 'https://www.google.se'
+    toInfo (url) {
+      window.location.href = url
     },
     fuzzySearch (result) {
       var name = result.name.toLowerCase()

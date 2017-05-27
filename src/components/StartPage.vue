@@ -6,18 +6,14 @@
           <label>Search</label>
           <md-input v-model="searchString"></md-input>
         </md-input-container>
-        <md-layout md-align="center">
-          <md-button class="md-raised md-primary" @click.native="pushPerson">Create person</md-button>
-        </md-layout>
       </md-layout>
     </md-layout>
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
-    <md-layout md-align="center">
+    <md-layout class="create-person-container" md-align="center">
       <md-layout md-flex="30">
-        <md-input-container>
-          <label>Name</label>
-          <md-input v-model="name"></md-input>
-        </md-input-container>
+        <md-layout md-align="center">
+          <md-button class="md-raised md-primary" @click.native="toCreate">Create New User</md-button>
+        </md-layout>
       </md-layout>
     </md-layout>
   </div>
@@ -35,20 +31,26 @@ export default {
     return {
       searchString: '',
       msg: 'Welcome to Alpha',
-      name: ''
+      name: '',
+      city: '',
+      country: '',
+      url: ''
     }
   },
   methods: {
     pushPerson () {
       this.$root.$firebaseRefs.person.push(
         {
-          'url': 'http://i.imgur.com/1rTODyG.jpg',
+          'url': this.url,
           'name': this.name,
-          'city': 'Stockholm',
-          'country': 'Sweden',
+          'city': this.city,
+          'country': this.country,
           'created_at': -1 * new Date().getTime()
         })
         .then(this.$router.push('/'))
+    },
+    toCreate () {
+      this.$router.push('/create-person-form')
     }
   }
 }
