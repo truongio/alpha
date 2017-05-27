@@ -1,7 +1,7 @@
 <template>
   <div class="start-page-container">
     <div class="logo">
-      <div class="md-display-3">Alpha</div>
+      <div class="md-display-1">Alpha</div>
       <img src="https://vuejs.org/images/logo.png" width="64px" />
     </div>
     <md-layout md-align="center">

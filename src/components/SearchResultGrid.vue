@@ -1,14 +1,22 @@
 <template>
   <md-layout class="search-result-grid">
     <md-layout md-align="center" md-flex="25" v-for="person in searchResult" :key="person['.key']" v-if="equalsTo(person)">
-      <md-whiteframe>
-        <md-avatar class="avatar">
-          <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
-        </md-avatar>
-        <div class="md-title">{{person.name}}</div>
-        <div class="md-subhead">{{person.city}}, {{person.country}}</div>
-        <md-button @click.native="toInfo(person['.key'])"><md-icon>info</md-icon></md-button>
-      </md-whiteframe>
+      <md-card md-with-hover class="has-ripple" @click.native="toInfo(person['.key'])">
+        <md-layout md-align="center">
+          <md-ink-ripple />
+          <md-layout md-flex="100" md-align="center">
+            <md-avatar class="avatar">
+              <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
+            </md-avatar>
+          </md-layout>
+          <md-layout md-flex="100" md-align="center">
+            <div class="md-title">{{person.name}}</div>
+          </md-layout>
+          <md-layout md-flex="100" md-align="center">
+            <div class="md-subhead">{{person.city}}, {{person.country}}</div>
+          </md-layout>
+        </md-layout>
+      </md-card>
     </md-layout>
   </md-layout>
 </template>
@@ -17,19 +25,19 @@
 export default {
   name: 'search-result-grid',
   props: ['searchResult', 'searchString'],
-  data () {
+  data() {
     return {
       msg: 'Welcome to Alpha'
     }
   },
   methods: {
-    toInfo (id) {
+    toInfo(id) {
       this.$router.push(`/user-profile/${id}`)
     },
-    equalsTo (person) {
+    equalsTo(person) {
       var name = person.name.toLowerCase()
       var search = this.searchString.toLowerCase()
-      return search === '' ? false : name.indexOf(search) !== -1
+      return name.indexOf(search) !== -1
     }
   }
 }
@@ -55,7 +63,7 @@ a {
   color: #42b983;
 }
 
-.md-whiteframe {
+.md-card {
   padding: 32px;
   width: 350px;
   margin-bottom: 16px;

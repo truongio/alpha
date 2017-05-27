@@ -4,15 +4,17 @@
       <md-button class="md-icon-button" @click.native="toggleLeftSidenav">
         <md-icon>menu</md-icon>
       </md-button>
-      <h2 class="md-title" style="flex: 1">Alpha</h2>
-      <md-button @click.native="toCreate">Create New User</md-button>
+      <h2 class="md-title" style="flex: 1">
+        <a style="color:white" href="#/">Alpha</a>
+      </h2>
+      <md-button @click.native="toCreate">New Account</md-button>
     </md-toolbar>
   
     <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
       <md-toolbar class="md-large">
-        <div class="md-toolbar-container">
-          <h3 class="md-title">Sidenav content</h3>
-        </div>
+        <md-layout md-align="center" class="md-toolbar-container">
+          <img src="http://fashionmythology.com/wp-content/uploads/2016/06/Chanel_logo_interlocking_cs.svg_.png" width="128px" />
+        </md-layout>
       </md-toolbar>
   
       <md-list>
@@ -62,7 +64,7 @@
         </md-list-item>
       </md-list>
     </md-sidenav>
-    
+  
     <main>
       <router-view></router-view>
     </main>
@@ -82,7 +84,7 @@ export default {
     closeRightSidenav() {
       this.$refs.rightSidenav.close()
     },
-    toCreate () {
+    toCreate() {
       this.$router.push('/create-person-form')
     }
   }
@@ -93,5 +95,13 @@ export default {
 main {
   text-align: center;
   margin-top: 80px;
+}
+
+.md-toolbar .md-toolbar-container {
+  width: 100%;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
 }
 </style>

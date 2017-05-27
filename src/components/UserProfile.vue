@@ -1,23 +1,23 @@
 <template>
   <md-layout md-align="center">
-    <md-layout md-flex="50">
-      <md-card>
-        <md-card-header>
-          <md-card-header-text>
-            <div class="md-title">{{ user.name }}</div>
-            <div class="md-subhead">{{ user.email }}</div>
-          </md-card-header-text>
-  
-          <md-card-media>
-            <img src="http://i.imgur.com/1rTODyG.jpg" alt="People">
-          </md-card-media>
-        </md-card-header>
-  
-        <md-card-actions>
-          <md-button>Action</md-button>
-          <md-button>Action</md-button>
-        </md-card-actions>
-      </md-card>
+    <md-layout md-flex="100" md-align="center">
+      <md-avatar class="md-avatar-icon md-large md-warn">
+        <md-icon>notes</md-icon>
+      </md-avatar>
+    </md-layout>
+    <md-layout md-flex="50" md-align="center">
+      <md-layout md-flex="100" md-align="center">
+        <span class="md-display-1">{{ user.name }}</span>
+      </md-layout>
+      <md-layout md-flex="100" md-align="center">
+        <span class="md-subheading">{{ user.email }}</span>
+      </md-layout>
+      <md-layout md-flex="100" md-align="center">
+        <span class="md-body">{{ user.city }}</span>
+      </md-layout>
+      <md-layout md-flex="100" md-align="center">
+        <span class="md-body">{{ user.country }}</span>
+      </md-layout>
     </md-layout>
   </md-layout>
 </template>
