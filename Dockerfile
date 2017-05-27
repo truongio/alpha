@@ -1,6 +1,6 @@
 FROM node:6
-COPY / /alpha
+COPY . /alpha
 WORKDIR "/alpha"
-RUN npm install && \
+RUN npm install --production && \
     npm run build
 EXPOSE 8080
