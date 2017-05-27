@@ -4,8 +4,8 @@
       <md-button class="md-icon-button" @click.native="toggleLeftSidenav">
         <md-icon>menu</md-icon>
       </md-button>
-  
       <h2 class="md-title" style="flex: 1">Alpha</h2>
+      <md-button @click.native="toCreate">Create New User</md-button>
     </md-toolbar>
   
     <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
@@ -62,6 +62,7 @@
         </md-list-item>
       </md-list>
     </md-sidenav>
+    
     <main>
       <div class="md-display-3">Alpha</div>
       <img src="./assets/logo.png" width="128px" />
@@ -82,6 +83,9 @@ export default {
     },
     closeRightSidenav() {
       this.$refs.rightSidenav.close()
+    },
+    toCreate () {
+      this.$router.push('/create-person-form')
     }
   }
 }
@@ -90,6 +94,6 @@ export default {
 <style>
 main {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 </style>

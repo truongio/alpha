@@ -9,13 +9,6 @@
       </md-layout>
     </md-layout>
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
-    <md-layout class="create-person-container" md-align="center">
-      <md-layout md-flex="30">
-        <md-layout md-align="center">
-          <md-button class="md-raised md-primary" @click.native="toCreate">Create New User</md-button>
-        </md-layout>
-      </md-layout>
-    </md-layout>
   </div>
 </template>
 
@@ -48,9 +41,6 @@ export default {
           'created_at': -1 * new Date().getTime()
         })
         .then(this.$router.push('/'))
-    },
-    toCreate () {
-      this.$router.push('/create-person-form')
     }
   }
 }
