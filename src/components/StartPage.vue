@@ -1,21 +1,19 @@
 <template>
-  <transition name="fade">
-    <div class="start-page-container">
-      <div class="logo">
-        <div class="md-display-1">Alpha</div>
-        <img src="https://vuejs.org/images/logo.png" width="64px" />
-      </div>
-      <md-layout md-align="center">
-        <md-layout md-flex="50">
-          <md-input-container>
-            <label>Search</label>
-            <md-input v-model="searchString"></md-input>
-          </md-input-container>
-        </md-layout>
-      </md-layout>
-      <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
+  <div class="start-page-container">
+    <div class="logo">
+      <div class="md-display-1">Alpha</div>
+      <img src="https://vuejs.org/images/logo.png" width="64px" />
     </div>
-  </transition>
+    <md-layout md-align="center">
+      <md-layout md-flex="50">
+        <md-input-container>
+          <label>Search</label>
+          <md-input v-model="searchString"></md-input>
+        </md-input-container>
+      </md-layout>
+    </md-layout>
+    <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
+  </div>
 </template>
 
 <script>
@@ -73,18 +71,5 @@ a {
 
 .logo {
   margin-bottom: 40px;
-}
-
-.fade-enter-active {
-  transition: opacity 0.5s
-}
-
-.fade-leave-to {
-  transition: opacity 0s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0
 }
 </style>
