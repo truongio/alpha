@@ -1,9 +1,8 @@
 <template>
   <md-layout class="search-result-grid">
     <md-layout md-align="center" md-flex="25" v-for="person in searchResult" :key="person['.key']" v-if="equalsTo(person)">
-      <md-card md-with-hover class="has-ripple" @click.native="toInfo(person['.key'])">
+      <md-card md-with-hover @click.native="toInfo(person['.key'])">
         <md-layout md-align="center">
-          <md-ink-ripple />
           <md-layout md-flex="100" md-align="center">
             <md-avatar class="avatar">
               <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
