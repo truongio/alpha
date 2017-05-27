@@ -1,5 +1,9 @@
 <template>
   <div class="start-page-container">
+    <div class="logo">
+      <div class="md-display-3">Alpha</div>
+      <img src="https://vuejs.org/images/logo.png" width="64px" />
+    </div>
     <md-layout md-align="center">
       <md-layout md-flex="30">
         <md-input-container>
@@ -20,18 +24,13 @@ export default {
   components: {
     SearchResultGrid
   },
-  data () {
+  data() {
     return {
-      searchString: '',
-      msg: 'Welcome to Alpha',
-      name: '',
-      city: '',
-      country: '',
-      url: ''
+      searchString: ''
     }
   },
   methods: {
-    pushPerson () {
+    pushPerson() {
       this.$root.$firebaseRefs.person.push(
         {
           'url': this.url,
@@ -68,5 +67,9 @@ a {
 
 .start-page-container {
   margin-top: 40px;
+}
+
+.logo {
+  margin-bottom: 40px;
 }
 </style>

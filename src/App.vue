@@ -64,8 +64,6 @@
     </md-sidenav>
     
     <main>
-      <div class="md-display-3">Alpha</div>
-      <img src="./assets/logo.png" width="128px" />
       <router-view></router-view>
     </main>
   </div>

@@ -2,6 +2,10 @@
   <md-layout class="create-person-container" md-align="center">
       <md-layout md-flex="30">
         <md-input-container>
+          <label>Email</label>
+          <md-input type="email" v-model="email"></md-input>
+        </md-input-container>
+        <md-input-container>
           <label>Name</label>
           <md-input v-model="name"></md-input>
         </md-input-container>
@@ -29,6 +33,7 @@ export default {
   name: 'create-person-form',
   data () {
     return {
+      email: '',
       name: '',
       city: '',
       country: '',
@@ -39,10 +44,11 @@ export default {
     pushPerson () {
       this.$root.$firebaseRefs.person.push(
         {
-          'url': this.url,
+          'email': this.email,
           'name': this.name,
           'city': this.city,
           'country': this.country,
+          'url': this.url,
           'created_at': -1 * new Date().getTime()
         })
         .then(this.$router.push('/'))

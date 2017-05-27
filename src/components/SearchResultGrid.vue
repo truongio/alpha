@@ -1,13 +1,13 @@
 <template>
   <md-layout class="search-result-grid">
-    <md-layout md-align="center" md-flex="25" v-for="result in searchResult" :key="result.name" v-if="fuzzySearch(result)">
+    <md-layout md-align="center" md-flex="25" v-for="person in searchResult" :key="person['.key']" v-if="equalsTo(person)">
       <md-whiteframe>
         <md-avatar class="avatar">
           <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
         </md-avatar>
-        <div class="md-title">{{result.name}}</div>
-        <div class="md-subhead">{{result.city}}, {{result.country}}</div>
-        <md-button @click.native="toInfo(result.url)"><md-icon>info</md-icon></md-button>
+        <div class="md-title">{{person.name}}</div>
+        <div class="md-subhead">{{person.city}}, {{person.country}}</div>
+        <md-button @click.native="toInfo(person['.key'])"><md-icon>info</md-icon></md-button>
       </md-whiteframe>
     </md-layout>
   </md-layout>
@@ -23,11 +23,11 @@ export default {
     }
   },
   methods: {
-    toInfo (url) {
-      window.location.href = url
+    toInfo (id) {
+      this.$router.push(`/user-profile/${id}`)
     },
-    fuzzySearch (result) {
-      var name = result.name.toLowerCase()
+    equalsTo (person) {
+      var name = person.name.toLowerCase()
       var search = this.searchString.toLowerCase()
       return search === '' ? false : name.indexOf(search) !== -1
     }
