@@ -9,27 +9,28 @@
       <span class="md-display-1">
         New Account
       </span>
-  
-      <md-input-container>
-        <label>Email</label>
-        <md-input type="email" v-model="email"></md-input>
-      </md-input-container>
-      <md-input-container>
-        <label>Name</label>
-        <md-input v-model="name"></md-input>
-      </md-input-container>
-      <md-input-container>
-        <label>City</label>
-        <md-input v-model="city"></md-input>
-      </md-input-container>
-      <md-input-container>
-        <label>Country</label>
-        <md-input v-model="country"></md-input>
-      </md-input-container>
-      <md-input-container>
-        <label>URL</label>
-        <md-input v-model="url"></md-input>
-      </md-input-container>
+      <md-layout class="form-input-container" md-flex="100">
+        <md-input-container>
+          <label>Email</label>
+          <md-input type="email" v-model="email"></md-input>
+        </md-input-container>
+        <md-input-container>
+          <label>Name</label>
+          <md-input v-model="name"></md-input>
+        </md-input-container>
+        <md-input-container>
+          <label>City</label>
+          <md-input v-model="city"></md-input>
+        </md-input-container>
+        <md-input-container>
+          <label>Country</label>
+          <md-input v-model="country"></md-input>
+        </md-input-container>
+        <md-input-container>
+          <label>URL</label>
+          <md-input v-model="url"></md-input>
+        </md-input-container>
+      </md-layout>
       <md-layout md-align="center">
         <md-button class="md-raised md-primary" @click.native="pushPerson">Create</md-button>
       </md-layout>
@@ -69,5 +70,9 @@ export default {
 <style scoped>
 .user-form-container {
   margin-top: 80px;
+}
+
+.form-input-container {
+  margin-top: 40px;
 }
 </style>
