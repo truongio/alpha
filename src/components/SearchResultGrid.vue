@@ -1,7 +1,7 @@
 <template>
   <md-layout class="search-result-grid">
     <md-layout md-align="center">
-      <md-layout md-gutter="16" md-flex-small="90" md-flex-large="75" md-flex-medium="100" md-flex="50">
+      <md-layout md-flex-small="90" md-flex-large="75" md-flex-medium="100" md-flex="50">
         <md-layout md-align="center" md-flex="100" v-if="searchResult.length == 0">
           <md-spinner md-indeterminate></md-spinner>
         </md-layout>
