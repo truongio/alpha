@@ -1,9 +1,9 @@
 <template>
   <div class="start-page-container">
     <div class="logo">
-      <div class="md-display-1">Alpha</div>
-      <img src="https://vuejs.org/images/logo.png" width="64px" />
+      <img src="https://vuejs.org/images/logo.png" width="100px" />
     </div>
+  
     <md-layout md-align="center">
       <md-layout md-flex="50">
         <md-input-container>
@@ -12,6 +12,7 @@
         </md-input-container>
       </md-layout>
     </md-layout>
+
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
   </div>
 </template>

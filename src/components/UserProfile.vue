@@ -1,22 +1,50 @@
 <template>
   <md-layout md-align="center">
     <md-layout md-flex="100" md-align="center">
-      <md-avatar class="md-avatar-icon md-large md-warn">
-        <md-icon>notes</md-icon>
-      </md-avatar>
+      <div class="logo">
+        <img src="https://vuejs.org/images/logo.png" width="100px" />
+      </div>
     </md-layout>
-    <md-layout md-flex="50" md-align="center">
-      <md-layout md-flex="100" md-align="center">
-        <span class="md-display-1">{{ user.name }}</span>
+    <md-layout md-flex="30">
+      <md-layout md-flex="20" md-column>
+        <div class="profile-info">
+          <md-layout md-align="end">
+              <md-image md-src="http://i.imgur.com/CJCYylN.jpg" width="100px" height="100px" alt="Avatar"></md-image>
+          </md-layout>
+          <md-layout md-flex="100" md-align="end">
+            <span class="md-title">{{ user.name }}</span>
+          </md-layout>
+          <md-layout md-flex="100" md-align="end">
+            <span class="md-subheading">{{ user.email }}</span>
+          </md-layout>
+          <md-layout md-flex="100" md-align="end">
+            <span class="md-body">{{ user.city }}</span>
+          </md-layout>
+          <md-layout md-flex="100" md-align="end">
+            <span class="md-body">{{ user.country }}</span>
+          </md-layout>
+        </div>
       </md-layout>
-      <md-layout md-flex="100" md-align="center">
-        <span class="md-subheading">{{ user.email }}</span>
-      </md-layout>
-      <md-layout md-flex="100" md-align="center">
-        <span class="md-body">{{ user.city }}</span>
-      </md-layout>
-      <md-layout md-flex="100" md-align="center">
-        <span class="md-body">{{ user.country }}</span>
+      <md-layout md-flex="80" md-column md-align="center">
+        <div class="profile-info">
+          <md-layout md-flex="100" md-align="center">
+            <md-avatar class="avatar">
+              <img :src="user.url" alt="Avatar">
+            </md-avatar>
+          </md-layout>
+          <md-layout md-flex="100" md-align="center">
+            <span class="md-title">{{ user.name }}</span>
+          </md-layout>
+          <md-layout md-flex="100" md-align="center">
+            <span class="md-subheading">{{ user.email }}</span>
+          </md-layout>
+          <md-layout md-flex="100" md-align="center">
+            <span class="md-body">{{ user.city }}</span>
+          </md-layout>
+          <md-layout md-flex="100" md-align="center">
+            <span class="md-body">{{ user.country }}</span>
+          </md-layout>
+        </div>
       </md-layout>
     </md-layout>
   </md-layout>
@@ -40,4 +68,7 @@ export default {
 </script>
 
 <style scoped>
+.profile-info {
+  padding-top: 80px;
+}
 </style>

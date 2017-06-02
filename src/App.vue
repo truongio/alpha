@@ -7,13 +7,13 @@
       <h2 class="md-title" style="flex: 1">
         <a style="color:white" href="#/">Alpha</a>
       </h2>
-      <md-button @click.native="toCreate">New Account</md-button>
+      <md-button class="md-raised md-accent" @click.native="toCreate">New Account</md-button>
     </md-toolbar>
   
-    <md-sidenav class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
+    <md-sidenav :md-swipeable="true" class="md-left" ref="leftSidenav" @open="open('Left')" @close="close('Left')">
       <md-toolbar class="md-large">
         <md-layout md-align="center" class="md-toolbar-container">
-          <img src="http://fashionmythology.com/wp-content/uploads/2016/06/Chanel_logo_interlocking_cs.svg_.png" width="128px" />
+          <img src="http://materialdesignblog.com/wp-content/uploads/2015/10/2-ionic-material.png" width="80px" />
         </md-layout>
       </md-toolbar>
   
