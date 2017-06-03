@@ -6,7 +6,7 @@
           <md-spinner md-indeterminate></md-spinner>
         </md-layout>
         <transition name="fade">
-          <md-layout md-align="center" md-gutter="16" v-if="searchResult.length > 0">
+          <md-layout md-align="center" v-if="searchResult.length > 0">
             <md-layout class="no-flex" v-for="person in searchResult" :key="person['.key']" v-if="equalsTo(person)">
               <md-card md-with-hover @click.native="toInfo(person['.key'])">
                 <md-layout>
@@ -71,7 +71,7 @@ a {
 .md-card {
   padding: 32px;
   width: 300px;
-  margin-bottom: 16px;
+  margin: 8px;
 }
 
 .search-result-grid {
