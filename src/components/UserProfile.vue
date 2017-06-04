@@ -5,7 +5,7 @@
         <div class="profile-info">
           <md-layout md-align="end" md-align-small="center">
             <md-image v-if="user.url" :md-src="user.url" class="image" width="100" height="100"></md-image>
-            <md-icon v-else class="md-size-4x">person</md-icon>
+            <md-icon v-if="user.url == ''" class="md-size-4x">person</md-icon>
           </md-layout>
           <div class="person-info">
             <md-layout md-flex="100" md-align="end" md-align-small="center">
@@ -24,7 +24,7 @@
               <tbody>
                 <tr>
                   <td class="md-caption" style="width:60%;">Birthday</td>
-                  <td class="md-body-1">{{ user.day }} {{user.month}}, {{ user.year }}</td>
+                  <td class="md-body-1">{{ user.day }} {{user.month}} {{ user.year }}</td>
                 </tr>
                 <tr>
                   <td class="md-caption" style="width:60%;">Sex</td>
