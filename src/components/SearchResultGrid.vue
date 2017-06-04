@@ -10,7 +10,8 @@
             <md-layout>
               <md-layout md-flex="100" md-align="center">
                 <md-avatar class="avatar">
-                  <img :src="person.url" alt="Avatar">
+                  <md-image v-if="person.url" :md-src="person.url"></md-image>
+                  <md-icon class="md-size-2x" v-else>person</md-icon>
                 </md-avatar>
               </md-layout>
               <md-layout md-flex="100" md-align="center">

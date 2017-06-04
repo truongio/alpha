@@ -1,51 +1,51 @@
 <template>
   <md-layout>
-    <md-layout md-flex="100" md-align-small="center">
+    <md-layout class="user-profile-container" md-flex="100" md-align-small="center">
       <md-layout md-flex="40" md-flex-small="100" md-column>
         <div class="profile-info">
           <md-layout md-align="end" md-align-small="center">
-            <md-image v-if="user.url" :md-src="user.url" class="image" width="150" height="150"></md-image>
-            <md-image v-else md-src="http://i.imgur.com/hdp9Eil.jpg" class="image" width="150" height="150"></md-image>
+            <md-image v-if="user.url" :md-src="user.url" class="image" width="100" height="100"></md-image>
+            <md-icon v-else class="md-size-4x">person</md-icon>
           </md-layout>
           <div class="person-info">
             <md-layout md-flex="100" md-align="end" md-align-small="center">
-              <span class="md-display-1">{{ user.name }}</span>
+              <span class="md-headline">{{ user.name }}</span>
             </md-layout>
           </div>
         </div>
       </md-layout>
       <md-layout md-flex="40" md-flex-small="90">
-        <div class="profile-more-info">
-          <md-layout md-flex="50">
-            <span class="md-display-2">About</span>
+        <md-layout class="profile-more-info">
+          <md-layout md-flex="100" md-hide-small>
+            <span class="md-display-1">About</span>
           </md-layout>
           <div class="basic-info">
             <table>
               <tbody>
                 <tr>
-                  <td style="width:60%;color:#ccc">Birthday</td>
-                  <td>{{ user.day }} {{user.month}}, {{ user.year }}</td>
+                  <td class="md-caption" style="width:60%;">Birthday</td>
+                  <td class="md-body-1">{{ user.day }} {{user.month}}, {{ user.year }}</td>
                 </tr>
                 <tr>
-                  <td style="width:60%;color:#ccc">Sex</td>
-                  <td>{{ user.sex }}</td>
+                  <td class="md-caption" style="width:60%;">Sex</td>
+                  <td class="md-body-1">{{ user.sex }}</td>
                 </tr>
                 <tr>
-                  <td style="width:60%;color:#ccc">Lives</td>
-                  <td>{{ user.lives }}</td>
+                  <td class="md-caption" style="width:60%;">Lives</td>
+                  <td class="md-body-1">{{ user.lives }}</td>
                 </tr>
                 <tr>
-                  <td style="width:60%;color:#ccc">Works at</td>
-                  <td>{{ user.work }}</td>
+                  <td class="md-caption" style="width:60%;">Works at</td>
+                  <td class="md-body-1">{{ user.work }}</td>
                 </tr>
               </tbody>
             </table>
           </div>
   
-          <md-layout class="description" md-flex="50">
+          <md-layout class="description" md-flex="50" md-flex-small="100">
             {{ user.description }}
           </md-layout>
-        </div>
+        </md-layout>
   
       </md-layout>
     </md-layout>
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'user-profile',
   data() {
@@ -72,17 +73,17 @@ export default {
 
 <style scoped>
 .profile-info {
-  padding-top: 40px;
+  margin: 0 40px;
 }
 
 .person-info {
+  justify-content: end;
   margin: 24px 0;
 }
 
 .profile-more-info {
   text-align: start;
-
-  margin: 40px 40px 0 40px;
+  margin: 0 40px;
 }
 
 .basic-info {
@@ -91,5 +92,14 @@ export default {
 
 .description {
   margin-top: 40px;
+}
+
+.user-profile-container {
+  margin-top: 40px;
+}
+
+.md-icon {
+  margin: 0;
+  left: 0;
 }
 </style>
