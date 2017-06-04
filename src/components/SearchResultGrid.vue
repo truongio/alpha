@@ -10,14 +10,14 @@
             <md-layout>
               <md-layout md-flex="100" md-align="center">
                 <md-avatar class="avatar">
-                  <img src="http://i.imgur.com/1rTODyG.jpg" alt="Avatar">
+                  <img :src="person.url" alt="Avatar">
                 </md-avatar>
               </md-layout>
               <md-layout md-flex="100" md-align="center">
-                <div class="md-title">{{person.name}}</div>
+                <div class="md-title">{{ person.name }}</div>
               </md-layout>
               <md-layout md-flex="100" md-align="center">
-                <div class="md-subhead">{{person.city}}, {{person.country}}</div>
+                <div class="md-subhead">{{ person.lives }}</div>
               </md-layout>
             </md-layout>
           </md-card>
@@ -65,8 +65,8 @@ a {
 }
 
 .md-card {
-  padding: 32px;
-  width: 300px;
+  padding: 24px;
+  width: 280px;
   margin: 8px;
 }
 
