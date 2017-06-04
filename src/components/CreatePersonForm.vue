@@ -31,17 +31,17 @@
           <md-input-container>
             <label for="month">Month</label>
             <md-select name="month" id="month" v-model="month">
-              <md-option value="january">January</md-option>
-              <md-option value="february">February</md-option>
-              <md-option value="mars">Mars</md-option>
-              <md-option value="april">April</md-option>
-              <md-option value="may">May</md-option>
-              <md-option value="june">June</md-option>
-              <md-option value="july">July</md-option>
-              <md-option value="august">August</md-option>
-              <md-option value="september">September</md-option>
-              <md-option value="november">November</md-option>
-              <md-option value="december">December</md-option>
+              <md-option value="January">January</md-option>
+              <md-option value="febrFebruaryuary">February</md-option>
+              <md-option value="Mars">Mars</md-option>
+              <md-option value="April">April</md-option>
+              <md-option value="May">May</md-option>
+              <md-option value="June">June</md-option>
+              <md-option value="July">July</md-option>
+              <md-option value="August">August</md-option>
+              <md-option value="September">September</md-option>
+              <md-option value="November">November</md-option>
+              <md-option value="December">December</md-option>
             </md-select>
           </md-input-container>
         </md-layout>
@@ -62,8 +62,8 @@
         <md-input-container>
           <label for="sex">Sex</label>
           <md-select name="sex" id="sex" v-model="sex">
-            <md-option value="male">Male</md-option>
-            <md-option value="female">Female</md-option>
+            <md-option value="Male">Male</md-option>
+            <md-option value="Female">Female</md-option>
           </md-select>
         </md-input-container>
       </md-layout>
