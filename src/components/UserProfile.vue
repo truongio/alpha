@@ -95,7 +95,7 @@ export default {
 }
 
 .user-profile-container {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .md-icon {

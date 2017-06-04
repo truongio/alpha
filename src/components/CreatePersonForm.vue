@@ -1,5 +1,5 @@
 <template>
-  <md-layout md-align-small="center">
+  <md-layout class="create-person-form-container" md-align-small="center">
     <md-layout class="container" md-flex="30" md-flex-small="100" md-column>
       <div>
         <md-layout md-align="end" md-align-small="center">
@@ -20,14 +20,14 @@
       </div>
     </md-layout>
     <md-layout class="container" md-flex="30" md-flex-small="90">
-      <md-layout class="about">
-        <span class="md-display-2">About</span>
+      <md-layout class="about" md-hide-small>
+        <span class="md-display-1">About</span>
       </md-layout>
       <md-layout md-flex="100">
         <span class="md-subheading">Birthday</span>
       </md-layout>
       <md-layout md-flex="100">
-        <md-layout class="sex-select" md-flex="30">
+        <md-layout md-flex="40">
           <md-input-container>
             <label for="month">Month</label>
             <md-select name="month" id="month" v-model="month">
@@ -146,5 +146,9 @@ export default {
 
 .about {
   margin-bottom: 24px;
+}
+
+.create-person-form-container {
+  margin: 40px 0;
 }
 </style>

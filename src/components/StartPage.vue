@@ -67,7 +67,7 @@ a {
 }
 
 .start-page-container {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .logo {
