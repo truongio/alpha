@@ -42,7 +42,7 @@
             </table>
           </div>
   
-          <md-layout class="description" md-flex="50" md-flex-small="100">
+          <md-layout class="description" md-flex="100">
             {{ user.description }}
           </md-layout>
         </md-layout>
