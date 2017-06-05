@@ -14,7 +14,7 @@
           </div>
         </div>
       </md-layout>
-      <md-layout md-flex="40" md-flex-small="90">
+      <md-layout md-flex="40" md-flex-medium="90" md-flex-small="90">
         <md-layout class="profile-more-info">
           <md-layout md-flex="100" md-hide-small>
             <span class="md-display-1">About</span>
@@ -42,8 +42,10 @@
             </table>
           </div>
   
-          <md-layout class="description" md-flex="70">
-            <pre>{{ user.description }}</pre>
+          <md-layout class="description" md-flex="100">
+            <md-layout md-flex="70" md-flex-medium="100">
+              <pre>{{ user.description }}</pre>
+            </md-layout>
           </md-layout>
         </md-layout>
   
