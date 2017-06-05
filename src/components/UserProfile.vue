@@ -43,9 +43,7 @@
           </div>
   
           <md-layout class="description" md-flex="70">
-            <pre>
-              {{ user.description }}
-            </pre>
+            <pre>{{ user.description }}</pre>
           </md-layout>
         </md-layout>
   
