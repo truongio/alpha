@@ -42,8 +42,10 @@
             </table>
           </div>
   
-          <md-layout class="description" md-flex="100">
-            {{ user.description }}
+          <md-layout class="description" md-flex="70">
+            <pre>
+              {{ user.description }}
+            </pre>
           </md-layout>
         </md-layout>
   
@@ -101,5 +103,24 @@ export default {
 .md-icon {
   margin: 0;
   left: 0;
+}
+
+pre {
+  width: 100%;
+  margin: 0;
+
+  text-align: left;
+  display: block;
+  font-family: inherit;
+  line-height: 33px;
+  font-size: 16px;
+  word-break: keep-all;
+
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: normal;
 }
 </style>
