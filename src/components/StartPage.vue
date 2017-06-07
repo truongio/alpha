@@ -12,7 +12,7 @@
         </md-input-container>
       </md-layout>
     </md-layout>
-
+  
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
   </div>
 </template>

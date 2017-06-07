@@ -53,7 +53,9 @@
     </md-sidenav>
   
     <main>
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </main>
   </div>
 </template>
@@ -117,5 +119,20 @@ main {
       margin-left: 8px;
     }
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity 0.1s ease;
+}
+
+.fade-leave {}
+
+.fade-leave-active {
+  transition: opacity 0.1s ease;
+  opacity: 0;
 }
 </style>
