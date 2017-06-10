@@ -14,7 +14,7 @@
           </div>
         </div>
       </md-layout>
-      <md-layout md-flex="40" md-flex-medium="90" md-flex-small="90">
+      <md-layout md-flex="40" md-flex-small="90">
         <md-layout class="profile-more-info">
           <md-layout md-flex="100" md-hide-small>
             <span class="md-display-1">About</span>
