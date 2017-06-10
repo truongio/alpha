@@ -1,6 +1,5 @@
 git pull -r
 rm -rf node_modules
-npm cache clean ui-apps-common
 npm install && npm install --production && npm run build
 
 GIT_REVISION=`git rev-parse HEAD`
