@@ -39,7 +39,7 @@ export default {
     equalsTo(person) {
       var name = person.name.toLowerCase()
       var lives = person.lives.toLowerCase()
-      var search = this.searchString.toLowerCase()
+      var search = this.searchString.toLowerCase().trim()
       return name.indexOf(search) !== -1 || lives.indexOf(search) !== -1
     }
   }
