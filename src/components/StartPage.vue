@@ -11,7 +11,6 @@
         </md-input-container>
       </md-layout>
     </md-layout>
-    <div> {{ searchString }} </div>
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
   </div>
 </template>
