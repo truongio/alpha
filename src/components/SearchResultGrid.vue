@@ -67,9 +67,25 @@ a {
 }
 
 .md-card {
+  justify-content: center;
+  align-items: center;
   padding: 24px;
   width: 280px;
   margin: 8px;
+  min-height: 140px;
+  text-align: center;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.md-card:hover {
+  -ms-transform: translate(0, -5px);
+  -webkit-transform: translate(0, -5px);
+  transform: translate(0, -5px);
 }
 
 .search-result-grid {

@@ -1,9 +1,8 @@
 <template>
   <div class="start-page-container">
     <div class="logo">
-      <img src="https://vuejs.org/images/logo.png" width="100px" />
+      <img src="https://vuejs.org/images/logo.png" width="100px"></img>
     </div>
-  
     <md-layout md-align="center">
       <md-layout md-flex="50">
         <md-input-container>
@@ -12,7 +11,7 @@
         </md-input-container>
       </md-layout>
     </md-layout>
-  
+    <div> {{ searchString }} </div>
     <search-result-grid :searchResult="this.$root.person" :searchString="searchString"></search-result-grid>
   </div>
 </template>
