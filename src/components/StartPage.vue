@@ -4,7 +4,7 @@
       <img src="https://vuejs.org/images/logo.png" width="100px"></img>
     </div>
     <md-layout md-align="center">
-      <md-layout md-flex="50">
+      <md-layout md-flex="50" md-flex-small="80">
         <md-input-container>
           <label>Search</label>
           <md-input v-model="searchString"></md-input>
