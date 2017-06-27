@@ -36,16 +36,16 @@
     <md-sidenav :md-swipeable="true" class="md-left" ref="leftSidenav">
       <md-toolbar class="md-large">
         <md-layout md-align="center" class="md-toolbar-container">
-          <img src="https://vuejs.org/images/logo.png" width="80px" />
+          <img src="https://vuejs.org/images/logo.png" width="80px"></img>
         </md-layout>
       </md-toolbar>
   
       <md-list>
-        <md-list-item @click.native="toHome">
+        <md-list-item @click="toHome">
           <md-icon>home</md-icon>
           <span>Home</span>
         </md-list-item>
-        <md-list-item @click.native="toCreate">
+        <md-list-item @click="toCreate">
           <md-icon>create</md-icon>
           <span>New Account</span>
         </md-list-item>
