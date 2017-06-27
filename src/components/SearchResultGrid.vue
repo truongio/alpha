@@ -5,11 +5,11 @@
         <md-spinner md-indeterminate></md-spinner>
       </md-layout>
       <transition name="fade">
-        <md-layout md-align="center" v-if="searchResult.length > 0">
+        <md-layout md-align="start" md-align-medium="center" v-if="searchResult.length > 0">
           <md-card md-with-hover @click.native="toInfo(person['.key'])" v-for="person in searchResult" :key="person['.key']" v-if="equalsTo(person)">
             <md-layout>
               <md-layout md-flex="100" md-align="center">
-                <md-avatar class="avatar">
+                <md-avatar class="md-large avatar">
                   <md-image v-if="person.url" :md-src="person.url"></md-image>
                   <md-icon class="md-size-2x" v-else>person</md-icon>
                 </md-avatar>
@@ -67,13 +67,10 @@ a {
 }
 
 .md-card {
-  justify-content: center;
-  align-items: center;
   padding: 24px;
-  width: 280px;
+  width: 300px;
   margin: 8px;
   min-height: 140px;
-  text-align: center;
   box-shadow: none;
   border: 1px solid rgba(0, 0, 0, 0.14);
   -webkit-transition: 0.5s ease-in-out;
